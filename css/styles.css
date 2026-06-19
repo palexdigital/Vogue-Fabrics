@@ -143,7 +143,7 @@ h1, h2, h3, h4 {
     margin-top: 5px;
 }
 
-.nav-menu a {
+.nav-menu a, .nav-menu a:visited {
     text-decoration: none;
     color: var(--primary-color);
     margin: 0 22px;
@@ -155,6 +155,31 @@ h1, h2, h3, h4 {
 
 .nav-menu a:hover, .nav-menu a.active {
     opacity: 0.6;
+}
+
+/* Dark Navbar Variant (add class="navbar navbar-dark" in HTML) */
+.navbar-dark {
+    background-color: var(--accent-dark);
+    border-bottom: 1px solid rgba(244, 241, 236, 0.1);
+}
+
+.navbar-dark .brand-logo-container,
+.navbar-dark .brand-logo-container p,
+.navbar-dark .nav-menu a,
+.navbar-dark .nav-menu a:visited,
+.navbar-dark .nav-utilities i {
+    color: #f4f1ec;
+}
+
+.navbar-dark .nav-menu a:hover,
+.navbar-dark .nav-menu a.active {
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .navbar-dark .nav-menu {
+        background-color: var(--accent-dark);
+    }
 }
 
 .nav-utilities {
