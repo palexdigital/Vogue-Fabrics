@@ -1,5 +1,5 @@
 /* Import Luxury Typography */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Montserrat:wght@200;300;400;500&family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Montserrat:wght@200;300;400;500&family=Pinyon+Script&display=swap');
 
 /* Style Resets */
 * {
@@ -15,7 +15,7 @@
     --border-color: rgba(74, 74, 72, 0.15);
     --font-serif: 'Cormorant Garamond', serif;
     --font-sans: 'Montserrat', sans-serif;
-    --font-script: 'Monsieur La Doulaise', cursive;
+    --font-script: 'Pinyon Script', cursive;
 }
 
 body {
@@ -37,10 +37,10 @@ h1, h2, h3, h4 {
 .script-accent {
     font-family: var(--font-script);
     text-transform: none !important;
-    font-size: 1.8em;
+    font-size: 2.4rem;
     letter-spacing: 0;
     display: inline-block;
-    padding-left: 5px;
+    padding-left: 8px;
     font-weight: 400;
 }
 
@@ -124,10 +124,10 @@ h1, h2, h3, h4 {
 
 .brand-logo-text {
     font-family: var(--font-script);
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     color: #ffffff;
     text-transform: none;
-    line-height: 1;
+    line-height: 0.9;
     letter-spacing: 0px;
 }
 
@@ -160,7 +160,7 @@ h1, h2, h3, h4 {
     opacity: 0.6;
 }
 
-/* Dark Navbar Variant (add class="navbar navbar-dark" in HTML) */
+/* Dark Navbar Variant */
 .navbar-dark {
     background-color: var(--accent-dark);
     border-bottom: 1px solid rgba(244, 241, 236, 0.1);
@@ -343,7 +343,7 @@ h1, h2, h3, h4 {
     background-position: center;
 }
 
-/* Reusable Dark Section (use to alternate light/dark rhythm down the page) */
+/* Reusable Dark Section */
 .section-dark {
     background-color: var(--accent-dark);
     color: #d8d6d2;
@@ -524,15 +524,6 @@ h1, h2, h3, h4 {
 .masonry-tall {
     grid-row: span 2;
     height: 775px;
-}
-
-/* Certification section backdrop (wrap the section in .section-dark in HTML to use this look) */
-.section-dark .certification-card {
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
-
-.section-dark .cert-authority {
-    color: #b0aea9;
 }
 
 /* Newsletter Multi-field Input Suite */
