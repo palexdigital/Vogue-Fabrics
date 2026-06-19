@@ -1,35 +1,3 @@
-
-Conversation with Gemini
-this is what my website looks like i want you to rmove the image and replace it with Vogue Exclusives written in cursive and in white, we will have that as a logo send me the full files
-
-Your updated files are ready.
-
-I replaced the image element inside the navbar logo container with a dedicated text element (<span class="brand-logo-text">Vogue Exclusives</span>). I then updated your stylesheet using the pre-configured luxury script cursive font ('Monsieur La Doulaise') and set the color strictly to white to ensure it renders flawlessly on the dark navbar.
-
-Key Changes Implemented:
-index.html: Removed the <img> logo tag and inserted <span class="brand-logo-text">Vogue Exclusives</span>.
-
-styles.css: Added the .brand-logo-text class using var(--font-script), forced the text color to white (#ffffff), matched layout metrics (line-height, letter-spacing), and explicitly enforced the white color variant for .navbar-dark .brand-logo-text.
-
-You can review or download both complete files using the tags below:
-
-Updated HTML: 
-HTML icon
-index
- HTML 
-Open
-
-Updated CSS: 
-CSS icon
-styles
- CSS 
-Open
-
-
-
-
-Gemini is AI and can make mistakes.
-
 /* Import Luxury Typography */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Montserrat:wght@200;300;400;500&family=Monsieur+La+Doulaise&display=swap');
 
@@ -764,5 +732,3 @@ h1, h2, h3, h4 {
     .hero-editorial-content h2 { font-size: 2.2rem; }
     .hero-actions { flex-direction: column; }
 }
-styles.css
-Displaying styles.css.
