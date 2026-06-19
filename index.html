@@ -5,143 +5,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Silk Stitches Bridal Couture | Home</title>
+    <title>Vogue Exclusives | High Luxury Atelier</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
     <header class="navbar">
-        <div class="logo">
-            <h1>Silk Stitches</h1>
-            <p>BRIDAL COUTURE</p>
-        </div>
-        <nav class="nav-links" id="navLinks">
-            <a href="index.html" class="active">Home</a>
-            <a href="pages/shop.html">Shop</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-        <div class="nav-icons">
-            <i class="fas fa-search"></i>
+        <div class="nav-utilities">
             <i class="fas fa-bars" id="menuToggle"></i>
+        </div>
+        <a href="index.html" class="brand-logo">
+            <h1>Vogue Exclusives</h1>
+            <p>High Luxury Atelier</p>
+        </a>
+        <nav class="nav-menu" id="navLinks">
+            <a href="index.html" class="active">Home</a>
+            <a href="pages/exclusives.html">The Exclusives</a>
+            <a href="pages/fabrics.html">Premium Fabrics</a>
+            <a href="#">Atelier Story</a>
+            <a href="#">Private Styling</a>
+        </nav>
+        <div class="nav-utilities">
+            <i class="fas fa-search"></i>
         </div>
     </header>
 
-    <!-- Video Hero Section -->
-    <section class="hero video-hero">
-        <video autoplay muted loop playsinline class="hero-video-bg">
+    <section class="hero-video-container">
+        <video autoplay muted loop playsinline class="bg-video">
             <source src="assets/bridal-hero-video.mp4" type="video/mp4">
-            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=1200" alt="Bridal Couture background">
+            <div style="background-color: #636362; width: 100%; height: 100%;"></div>
         </video>
-        <div class="video-overlay"></div>
+        <div class="video-scrim"></div>
 
-        <div class="hero-content">
-            <h2>For Beautiful Love Stories,<br>Beautifully Told.</h2>
-            <p>At Silk Stitches Bridal, every gown is a chapter, thoughtfully chosen, exquisitely crafted, and destined to become part of your forever.</p>
-            <a href="#" class="btn-outline">Book Your Appointment Now</a>
+        <div class="hero-editorial-content">
+            <h2>Timeless <span class="script-accent">Elegance</span>,<br>Crafted for Exceptional Women</h2>
+            <p>Discover exclusive dresses designed to embody sophistication, confidence, and effortless luxury.</p>
+            <div class="hero-actions">
+                <a href="pages/exclusives.html" class="btn-luxury-white">Shop Collection</a>
+                <a href="#styling" class="btn-luxury-white">Book Private Styling</a>
+            </div>
         </div>
     </section>
 
-    <!-- Collection Showcase -->
-    <section class="section-container">
-        <h3 class="section-title">Find Your Perfect Wedding Dress</h3>
-        <p class="section-subtitle">Feel like royalty in our breathtaking dresses, designed to make your moment unforgettable.</p>
+    <section class="section-padding container-wide">
+        <div class="text-center">
+            <h3 class="editorial-title">The Summer <span class="script-accent">Collection</span></h3>
+            <p class="editorial-subtitle">Curated Minimalist Silhouette Masterpieces</p>
+        </div>
         
-        <div class="grid-4">
-            <div class="product-card">
-                <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&q=80&w=400');"></div>
-                <h4>Okeana</h4>
-            </div>
-            <div class="product-card">
-                <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1546808220-0bc4f711f965?auto=format&fit=crop&q=80&w=400');"></div>
-                <h4>Armani</h4>
-            </div>
-            <div class="product-card">
-                <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1591555200985-ac555893f9c8?auto=format&fit=crop&q=80&w=400');"></div>
-                <h4>Mona</h4>
-            </div>
-            <div class="product-card">
-                <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=400');"></div>
-                <h4>Kylie</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mid Banner Section -->
-    <section class="mid-banner">
-        <div class="banner-overlay">
-            <p class="gold-text-tag">Ready to Wear Elegance</p>
-            <h2>Your Ultimate Bridal Destination</h2>
-            <p class="banner-p">Brides travel from across South Africa and the African continent, drawn not only to our carefully curated gowns, but to the feeling that awaits them here: one of being truly seen, understood, and beautifully laced.</p>
-            <a href="shop.html" class="btn-underline-white">Shop Now</a>
-        </div>
-    </section>
-
-    <!-- Split Feature Section -->
-    <section class="split-section">
-        <div class="split-left" style="background-image: url('https://images.unsplash.com/photo-1623428454614-abaf00244e52?auto=format&fit=crop&q=80&w=600');">
-            <div class="split-left-content">
-                <h2>Where Elegance Meets Warmth</h2>
-                <a href="#" class="btn-underline-white">Book Your Appointment</a>
-            </div>
-        </div>
-        <div class="split-right">
-            <div class="grid-2">
-                <div class="product-card">
-                    <div class="img-placeholder tall" style="background-image: url('https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=400');"></div>
-                    <h4>Olena</h4>
+        <div class="editorial-grid-3">
+            <a href="pages/exclusives.html" class="lookcard">
+                <div class="lookcard-img-wrapper">
+                    <img class="lookcard-img" src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600" alt="Couture dress 1">
                 </div>
-                <div class="product-card">
-                    <div class="img-placeholder tall" style="background-image: url('https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=400');"></div>
-                    <h4>Lady</h4>
+                <h4>The Aurelia Gown</h4>
+                <p>Signature Haute Couture</p>
+            </a>
+            <a href="pages/exclusives.html" class="lookcard">
+                <div class="lookcard-img-wrapper">
+                    <img class="lookcard-img" src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=600" alt="Couture dress 2">
+                </div>
+                <h4>The Siren Draped Silhouette</h4>
+                <p>Limited Run Exclusive</p>
+            </a>
+            <a href="pages/exclusives.html" class="lookcard">
+                <div class="lookcard-img-wrapper">
+                    <img class="lookcard-img" src="https://images.unsplash.com/photo-1591555200985-ac555893f9c8?auto=format&fit=crop&q=80&w=600" alt="Couture dress 3">
+                </div>
+                <h4>The Minimalist Column</h4>
+                <p>Pure Silk Crêpe</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="section-padding container-wide" style="border-top: 1px solid rgba(99,99,98,0.1);">
+        <div class="text-center">
+            <h3 class="editorial-title">New Arrivals</h3>
+            <p class="editorial-subtitle">Freshly unveiled from the design house floor</p>
+        </div>
+
+        <div class="editorial-grid-4">
+            <a href="pages/fabrics.html" class="lookcard">
+                <div class="lookcard-img-wrapper">
+                    <img class="lookcard-img" style="height:380px;" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=500" alt="Premium Silk">
+                </div>
+                <h4>Heavyweight Mulberry Silk</h4>
+                <p>Fabrics / Per Meter</p>
+            </a>
+            <a href="pages/exclusives.html" class="lookcard">
+                <div class="lookcard-img-wrapper">
+                    <img class="lookcard-img" style="height:380px;" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=500" alt="Lace gown">
+                </div>
+                <h4>Bespoke Chantilly Midi</h4>
+                <p>Exclusives</p>
+            </a>
+            <a href="pages/fabrics.html" class="lookcard">
+                <div class="lookcard-img-wrapper">
+                    <img class="lookcard-img" style="height:380px;" src="https://images.unsplash.com/photo-1623428454614-abaf00244e52?auto=format&fit=crop&q=80&w=500" alt="French Guipure">
+                </div>
+                <h4>Embroidered French Guipure</h4>
+                <p>Fabrics / Per Meter</p>
+            </a>
+            <a href="pages/exclusives.html" class="lookcard">
+                <div class="lookcard-img-wrapper">
+                    <img class="lookcard-img" style="height:380px;" src="https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&q=80&w=500" alt="Satin gown">
+                </div>
+                <h4>The Liquid Satin Corset Vestit</h4>
+                <p>Exclusives</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="split-atelier">
+        <div class="split-atelier-left">
+            <h3 class="editorial-title">The <span class="script-accent">Signature</span> Dresses</h3>
+            <p>Our House signatures represent pieces designed for structural balance, quiet grandeur, and unparalleled prestige. Constructed over months of fastidious hand-fitting at our atelier, they offer unmatched timeless structure.</p>
+            <div>
+                <a href="pages/exclusives.html" class="btn-luxury">Explore Haute Collections</a>
+            </div>
+        </div>
+        <div class="split-atelier-right" style="background-image: url('https://images.unsplash.com/photo-1623428454614-abaf00244e52?auto=format&fit=crop&q=80&w=1000');"></div>
+    </section>
+
+    <section class="section-padding container-wide text-center" style="max-width: 900px;">
+        <h3 class="editorial-title">The Vogue Exclusives <span class="script-accent">Luxury</span> Craft</h3>
+        <p style="font-size: 1.1rem; line-height: 2; margin-top: 30px; font-weight: 300;">
+            Blending the architectural rules of mid-century Paris design with ultra-modern minimalist precision. Vogue Exclusives creates garments that go beyond temporary trends. Every millimeter of fine chiffon, silk crepe, and hand-woven lace is meticulously inspected to ensure you receive true luxury craftsmanship.
+        </p>
+    </section>
+
+    <section class="section-padding testimonial-carousel text-center">
+        <div class="testimonial-inner">
+            <p class="testimonial-quote">"The feeling of entering a Vogue Exclusives piece is completely transformative. The drape of the heavy silk feels absolute. It is quiet luxury in its ultimate formulation."</p>
+            <h5 class="testimonial-author">— Lady Victoria C.</h5>
+        </div>
+    </section>
+
+    <section id="styling" class="section-padding container-wide text-center" style="background-color: rgba(99,99,98,0.02);">
+        <h3 class="editorial-title">Bespoke Consultations</h3>
+        <p class="editorial-subtitle">Experience a Private Atelier Fitting Session</p>
+        <div style="max-width: 600px; margin: 0 auto;">
+            <p style="margin-bottom: 35px; font-size: 0.95rem;">Connect with our world-class couturiers to design custom measurements, color matches, or select limited fabric textiles via direct remote consultation.</p>
+            <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F2348035539993%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnSfQRf_4tBF_LUQkZhpJ-bGmvBAQBtivBNpBnvpqnyNkEb3_8_NqRo4ay5EE_aem_XHIzNRrnPos1tq-qvAAy7g&e=AUD0-Zaj7xuUyHjQBNwHqEl4gcLeiFmUZu-IYnrfm2qosSNKA6oog29Q9am-6FnYPsBQgxM2XN1JrPLmBi1OFDpB-bcEdSoxmOetlg4yo-_HzcXGsTtP3PqD4QXI4QXPczek7vE" target="_blank" rel="noopener noreferrer" class="btn-luxury">Book Private Styling Via WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="section-padding container-wide" style="padding-bottom:120px;">
+        <div class="text-center">
+            <h3 class="editorial-title">The House Gallery</h3>
+            <p class="editorial-subtitle">Atmospheres from our latest private showing</p>
+        </div>
+        <div class="lookbook-masonry">
+            <div class="masonry-item masonry-tall" style="background-image: url('https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="masonry-item" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="masonry-item" style="background-image: url('https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="masonry-item masonry-tall" style="background-image: url('https://images.unsplash.com/photo-1591555200985-ac555893f9c8?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="masonry-item" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="masonry-item" style="background-image: url('https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&q=80&w=600');"></div>
+        </div>
+    </section>
+
+    <section class="section-padding text-center" style="background-color: rgba(99,99,98,0.04); border-top: 1px solid var(--border-color);">
+        <div class="newsletter-box">
+            <h3 class="editorial-title">Atelier Openings</h3>
+            <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; opacity:0.8;">Receive early private lookbook drops and collection priority alerts.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Vogue Exclusives.');">
+                <input type="email" class="newsletter-input" placeholder="ENTER YOUR EMAIL ADDRESS" required>
+                <button type="submit" class="newsletter-submit">Request Entry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="luxury-footer">
+        <div class="footer-columns container-wide">
+            <div class="footer-col">
+                <h4 style="font-family: var(--font-serif); font-size:1.2rem; letter-spacing:2px; margin-bottom:15px;">VOGUE EXCLUSIVES</h4>
+                <p>Worldwide Insured Shipping. Experience premium curation, absolute security handling, and custom made tailoring options directly at your fingertip.</p>
+                <div class="social-tray">
+                    <a href="https://instagram.com/vogue_exclusives_" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@vogue.exclusives" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
+            <div class="footer-col">
+                <h4>Collections</h4>
+                <a href="pages/exclusives.html">The Signature Gowns</a>
+                <a href="pages/fabrics.html">Premium Textiles</a>
+                <a href="pages/exclusives.html">New Arrivals</a>
+            </div>
+            <div class="footer-col">
+                <h4>House Info</h4>
+                <a href="#">Bespoke Craft Story</a>
+                <a href="#">Shipping Policies</a>
+                <a href="#">Atelier Verification</a>
+            </div>
+            <div class="footer-col">
+                <h4>Social Identity</h4>
+                <p>Instagram: @vogue_exclusives_</p>
+                <p>TikTok: vogue.exclusives</p>
+            </div>
         </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section-container testimonials-section">
-        <div class="testimonials-grid">
-            <div class="testimonial-header">
-                <h3>What our brides said about us</h3>
-                <p>Real brides share their moments of elegance, joy, and unforgettable memories in our gowns.</p>
-                <a href="#" class="btn-gold-solid">Book Your Appointment &rarr;</a>
-            </div>
-            <div class="testimonial-card">
-                <p class="quote">"This is a love/thank you letter to my bridal besties (Silk Stitches). I came in probably 6 weeks before my wedding day with all the panic in the world. My friend had previously used them and advised that I check them out. And I did... a match made in heaven! 😻"</p>
-                <h5 class="author">- Precious Ramuboxa</h5>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div>
-                <h4>Our World of Bridal</h4>
-                <p>Experience the luxury, craftsmanship, and elegance of every gown we create.</p>
-            </div>
-            <div>
-                <h4>Fourways Boutique</h4>
-                <p>Main Building, Design Quarter, Leslie Rd, Witkoppen, Johannesburg</p>
-                <a href="#" class="footer-link">Contact Us</a>
-            </div>
-            <div>
-                <h4>Pretoria Boutique</h4>
-                <p>Club Retail Centre, Hazelwood Rd, Hazelwood, Pretoria</p>
-                <a href="#" class="footer-link">Contact Us</a>
-            </div>
-            <div>
-                <h4>Connect</h4>
-                <p>info@silkstitches.co.za</p>
-            </div>
+        <div class="footer-bottom container-wide">
+            <p>&copy; 2026 Vogue Exclusives. All Rights Reserved.</p>
+            <p>Designed with Quiet Luxury Style</p>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F2348035539993%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnSfQRf_4tBF_LUQkZhpJ-bGmvBAQBtivBNpBnvpqnyNkEb3_8_NqRo4ay5EE_aem_XHIzNRrnPos1tq-qvAAy7g&e=AUD0-Zaj7xuUyHjQBNwHqEl4gcLeiFmUZu-IYnrfm2qosSNKA6oog29Q9am-6FnYPsBQgxM2XN1JrPLmBi1OFDpB-bcEdSoxmOetlg4yo-_HzcXGsTtP3PqD4QXI4QXPczek7vE" class="whatsapp-luxury-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
