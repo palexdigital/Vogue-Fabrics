@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Vogue Exclusives | High Luxury Atelier</title>
+    <title>Vogue Exclusives | Premium Laces, Brocades & More</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -15,16 +15,15 @@
         <div class="nav-utilities">
             <i class="fas fa-bars" id="menuToggle"></i>
         </div>
-        <a href="index.html" class="brand-logo">
-            <h1>Vogue Exclusives</h1>
-            <p>High Luxury Atelier</p>
+        <a href="index.html" class="brand-logo-container">
+            <img src="https://img.sanishtech.com/u/e59a08641b348958cd9bf3e0f7a117a9.jpg" alt="Vogue Exclusives Logo" class="brand-logo-img">
+            <p>Premium Laces, Brocades & More</p>
         </a>
         <nav class="nav-menu" id="navLinks">
             <a href="index.html" class="active">Home</a>
             <a href="pages/exclusives.html">The Exclusives</a>
             <a href="pages/fabrics.html">Premium Fabrics</a>
             <a href="#">Atelier Story</a>
-            <a href="#">Private Styling</a>
         </nav>
         <div class="nav-utilities">
             <i class="fas fa-search"></i>
@@ -43,7 +42,7 @@
             <p>Discover exclusive dresses designed to embody sophistication, confidence, and effortless luxury.</p>
             <div class="hero-actions">
                 <a href="pages/exclusives.html" class="btn-luxury-white">Shop Collection</a>
-                <a href="#styling" class="btn-luxury-white">Book Private Styling</a>
+                <a href="#styling" class="btn-luxury-white">Book Styling</a>
             </div>
         </div>
     </section>
@@ -71,7 +70,7 @@
             </a>
             <a href="pages/exclusives.html" class="lookcard">
                 <div class="lookcard-img-wrapper">
-                    <img class="lookcard-img" src="https://images.unsplash.com/photo-1591555200985-ac555893f9c8?auto=format&fit=crop&q=80&w=600" alt="Couture dress 3">
+                    <img class="lookcard-img" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=600" alt="Couture dress 3">
                 </div>
                 <h4>The Minimalist Column</h4>
                 <p>Pure Silk Crêpe</p>
@@ -120,7 +119,7 @@
     <section class="split-atelier">
         <div class="split-atelier-left">
             <h3 class="editorial-title">The <span class="script-accent">Signature</span> Dresses</h3>
-            <p>Our House signatures represent pieces designed for structural balance, quiet grandeur, and unparalleled prestige. Constructed over months of fastidious hand-fitting at our atelier, they offer unmatched timeless structure.</p>
+            <p>Our House signatures represent pieces designed for structural balance, quiet grandeur, and unparalleled prestige. Constructed over months of hand-fitting at our atelier.</p>
             <div>
                 <a href="pages/exclusives.html" class="btn-luxury">Explore Haute Collections</a>
             </div>
@@ -130,28 +129,60 @@
 
     <section class="section-padding container-wide text-center" style="max-width: 900px;">
         <h3 class="editorial-title">The Vogue Exclusives <span class="script-accent">Luxury</span> Craft</h3>
-        <p style="font-size: 1.1rem; line-height: 2; margin-top: 30px; font-weight: 300;">
-            Blending the architectural rules of mid-century Paris design with ultra-modern minimalist precision. Vogue Exclusives creates garments that go beyond temporary trends. Every millimeter of fine chiffon, silk crepe, and hand-woven lace is meticulously inspected to ensure you receive true luxury craftsmanship.
+        <p style="font-size: 1.05rem; line-height: 2; margin-top: 25px; font-weight: 300;">
+            Blending classical design architecture with modern minimalist precision. Vogue Exclusives creates garments that transcend seasonal trends. Every piece of fine fabric is hand-inspected to guarantee true artisan quality.
         </p>
     </section>
 
+    <section class="section-padding container-wide text-center" style="background-color: rgba(99,99,98,0.01); border-top: 1px solid var(--border-color);">
+        <div class="text-center">
+            <h3 class="editorial-title">Certifications & Accreditation</h3>
+            <p class="editorial-subtitle">Verified Authenticity & Governance Standards</p>
+        </div>
+        
+        <div class="certification-card">
+            <div class="cert-preview-box" onclick="openCertModal()">
+                <img src="https://img.sanishtech.com/u/ab2a3f8f21a918d3fd5120043a877be4.png" alt="CAC Certificate Preview" class="cert-preview-img">
+            </div>
+            <div class="cert-info-box">
+                <div class="cert-header-row">
+                    <h4 class="cert-title">CACA Certified</h4>
+                    <i class="fas fa-shield-check cert-badge-icon"></i>
+                </div>
+                <div class="cert-authority">Corporate Affairs Commission / Official Verification Registered</div>
+                <p class="cert-desc">
+                    Professional Certification & Accreditation<br><br>
+                    Our commitment to excellence is supported by recognized industry certifications and continuous professional development. This certification demonstrates adherence to professional standards, best practices, and a dedication to delivering quality services.
+                </p>
+                <button class="btn-luxury" onclick="openCertModal()">View Certificate</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="certModal" class="cert-modal">
+        <div class="cert-modal-content">
+            <span class="cert-modal-close" onclick="closeCertModal()">&times;</span>
+            <img src="https://img.sanishtech.com/u/ab2a3f8f21a918d3fd5120043a877be4.png" alt="Full CAC Certificate" class="cert-modal-img">
+        </div>
+    </div>
+
     <section class="section-padding testimonial-carousel text-center">
         <div class="testimonial-inner">
-            <p class="testimonial-quote">"The feeling of entering a Vogue Exclusives piece is completely transformative. The drape of the heavy silk feels absolute. It is quiet luxury in its ultimate formulation."</p>
+            <p class="testimonial-quote">"The drape of the heavy silk feels absolute. It is quiet luxury in its ultimate formulation."</p>
             <h5 class="testimonial-author">— Lady Victoria C.</h5>
         </div>
     </section>
 
     <section id="styling" class="section-padding container-wide text-center" style="background-color: rgba(99,99,98,0.02);">
-        <h3 class="editorial-title">Bespoke Consultations</h3>
-        <p class="editorial-subtitle">Experience a Private Atelier Fitting Session</p>
+        <h3 class="editorial-title">Atelier Consultations</h3>
+        <p class="editorial-subtitle">Experience a Private Fitting Session</p>
         <div style="max-width: 600px; margin: 0 auto;">
-            <p style="margin-bottom: 35px; font-size: 0.95rem;">Connect with our world-class couturiers to design custom measurements, color matches, or select limited fabric textiles via direct remote consultation.</p>
-            <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F2348035539993%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnSfQRf_4tBF_LUQkZhpJ-bGmvBAQBtivBNpBnvpqnyNkEb3_8_NqRo4ay5EE_aem_XHIzNRrnPos1tq-qvAAy7g&e=AUD0-Zaj7xuUyHjQBNwHqEl4gcLeiFmUZu-IYnrfm2qosSNKA6oog29Q9am-6FnYPsBQgxM2XN1JrPLmBi1OFDpB-bcEdSoxmOetlg4yo-_HzcXGsTtP3PqD4QXI4QXPczek7vE" target="_blank" rel="noopener noreferrer" class="btn-luxury">Book Private Styling Via WhatsApp</a>
+            <p style="margin-bottom: 35px; font-size: 0.95rem;">Connect with our world-class couturiers to design custom measurements or select limited fabric textiles via direct remote consultation.</p>
+            <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F2348035539993%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnSfQRf_4tBF_LUQkZhpJ-bGmvBAQBtivBNpBnvpqnyNkEb3_8_NqRo4ay5EE_aem_XHIzNRrnPos1tq-qvAAy7g&e=AUD0-Zaj7xuUyHjQBNwHqEl4gcLeiFmUZu-IYnrfm2qosSNKA6oog29Q9am-6FnYPsBQgxM2XN1JrPLmBi1OFDpB-bcEdSoxmOetlg4yo-_HzcXGsTtP3PqD4QXI4QXPczek7vE" target="_blank" rel="noopener noreferrer" class="btn-luxury">Book Styling Via WhatsApp</a>
         </div>
     </section>
 
-    <section class="section-padding container-wide" style="padding-bottom:120px;">
+    <section class="section-padding container-wide" style="padding-bottom:100px;">
         <div class="text-center">
             <h3 class="editorial-title">The House Gallery</h3>
             <p class="editorial-subtitle">Atmospheres from our latest private showing</p>
@@ -159,20 +190,38 @@
         <div class="lookbook-masonry">
             <div class="masonry-item masonry-tall" style="background-image: url('https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600');"></div>
             <div class="masonry-item" style="background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600');"></div>
-            <div class="masonry-item" style="background-image: url('https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=600');"></div>
+            <div class="masonry-item" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=600');"></div>
             <div class="masonry-item masonry-tall" style="background-image: url('https://images.unsplash.com/photo-1591555200985-ac555893f9c8?auto=format&fit=crop&q=80&w=600');"></div>
             <div class="masonry-item" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=600');"></div>
             <div class="masonry-item" style="background-image: url('https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&q=80&w=600');"></div>
         </div>
     </section>
 
-    <section class="section-padding text-center" style="background-color: rgba(99,99,98,0.04); border-top: 1px solid var(--border-color);">
+    <section class="section-padding" style="background-color: rgba(99,99,98,0.03); border-top: 1px solid var(--border-color);">
         <div class="newsletter-box">
             <h3 class="editorial-title">Atelier Openings</h3>
-            <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; opacity:0.8;">Receive early private lookbook drops and collection priority alerts.</p>
-            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Vogue Exclusives.');">
-                <input type="email" class="newsletter-input" placeholder="ENTER YOUR EMAIL ADDRESS" required>
-                <button type="submit" class="newsletter-submit">Request Entry</button>
+            <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; opacity:0.8; margin-bottom: 20px;">Receive early lookbook drops and collection priority alerts via WhatsApp.</p>
+            
+            <form onsubmit="sendWhatsAppAlert(event)">
+                <div class="luxury-form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="wa_name" class="luxury-field" required>
+                </div>
+                <div class="luxury-form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="wa_email" class="luxury-field" required>
+                </div>
+                <div class="luxury-form-group">
+                    <label>Country & City</label>
+                    <input type="text" id="wa_location" class="luxury-field" placeholder="e.g. Lagos, Nigeria" required>
+                </div>
+                <div class="luxury-form-group">
+                    <label>What are you looking for?</label>
+                    <input type="text" id="wa_interest" class="luxury-field" placeholder="e.g. Custom Silk Gowns / French Lace" required>
+                </div>
+                <div style="margin-top: 35px; text-align: center;">
+                    <button type="submit" class="btn-luxury">Request Entry</button>
+                </div>
             </form>
         </div>
     </section>
@@ -180,8 +229,8 @@
     <footer class="luxury-footer">
         <div class="footer-columns container-wide">
             <div class="footer-col">
-                <h4 style="font-family: var(--font-serif); font-size:1.2rem; letter-spacing:2px; margin-bottom:15px;">VOGUE EXCLUSIVES</h4>
-                <p>Worldwide Insured Shipping. Experience premium curation, absolute security handling, and custom made tailoring options directly at your fingertip.</p>
+                <h4 style="font-family: var(--font-serif); font-size:1.1rem; letter-spacing:2px; margin-bottom:15px;">VOGUE EXCLUSIVES</h4>
+                <p>Worldwide Insured Shipping. Experience premium curation, absolute security handling, and custom made tailoring options.</p>
                 <div class="social-tray">
                     <a href="https://instagram.com/vogue_exclusives_" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     <a href="https://tiktok.com/@vogue.exclusives" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
@@ -197,7 +246,6 @@
                 <h4>House Info</h4>
                 <a href="#">Bespoke Craft Story</a>
                 <a href="#">Shipping Policies</a>
-                <a href="#">Atelier Verification</a>
             </div>
             <div class="footer-col">
                 <h4>Social Identity</h4>
@@ -207,7 +255,7 @@
         </div>
         <div class="footer-bottom container-wide">
             <p>&copy; 2026 Vogue Exclusives. All Rights Reserved.</p>
-            <p>Designed with Quiet Luxury Style</p>
+            <p><a href="https://palexdigital.pages.dev/" target="_blank" style="opacity: 1; text-decoration: underline; display: inline;">Developed by paléXdigital</a></p>
         </div>
     </footer>
 
