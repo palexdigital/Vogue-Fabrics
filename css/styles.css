@@ -311,11 +311,39 @@ h1, h2, h3, h4 {
     background-position: center;
 }
 
+/* Reusable Dark Section (use to alternate light/dark rhythm down the page) */
+.section-dark {
+    background-color: var(--accent-dark);
+    color: #d8d6d2;
+}
+
+.section-dark h2, .section-dark h3, .section-dark h4 {
+    color: #f4f1ec;
+}
+
+.section-dark .editorial-subtitle {
+    color: #cfcdc8;
+}
+
+.section-dark .lookcard, .section-dark .lookcard p {
+    color: #d8d6d2;
+}
+
+.section-dark .btn-luxury {
+    border-color: #f4f1ec;
+    color: #f4f1ec;
+}
+
+.section-dark .btn-luxury:hover {
+    background-color: #f4f1ec;
+    color: var(--accent-dark);
+}
+
 /* CAC Certification Layout */
 .certification-card {
     background-color: #ffffff;
     border: 1px solid var(--border-color);
-    box-shadow: 0 10px 40px rgba(28, 27, 26, 0.06);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     max-width: 1100px;
@@ -466,6 +494,15 @@ h1, h2, h3, h4 {
     height: 775px;
 }
 
+/* Certification section backdrop (wrap the section in .section-dark in HTML to use this look) */
+.section-dark .certification-card {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.section-dark .cert-authority {
+    color: #b0aea9;
+}
+
 /* Newsletter Multi-field Input Suite */
 .newsletter-box {
     max-width: 500px;
@@ -503,6 +540,15 @@ h1, h2, h3, h4 {
 
 .luxury-field:focus {
     outline: none;
+}
+
+.section-dark .luxury-field {
+    border-bottom: 1px solid #f4f1ec;
+    color: #f4f1ec;
+}
+
+.section-dark .luxury-form-group label {
+    color: #cfcdc8;
 }
 
 /* Unified Catalog Layouts */
