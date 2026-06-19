@@ -9,9 +9,10 @@
 }
 
 :root {
-    --bg-color: #e8e4df;
-    --primary-color: #636362;
-    --border-color: rgba(99, 99, 98, 0.15);
+    --bg-color: #f4f1ec;
+    --primary-color: #4a4a48;
+    --accent-dark: #1c1b1a;
+    --border-color: rgba(74, 74, 72, 0.15);
     --font-serif: 'Cormorant Garamond', serif;
     --font-sans: 'Montserrat', sans-serif;
     --font-script: 'Monsieur La Doulaise', cursive;
@@ -178,6 +179,7 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     padding-left: 8%;
+    background-color: var(--accent-dark);
 }
 
 .bg-video {
@@ -199,7 +201,7 @@ h1, h2, h3, h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.35);
     z-index: 2;
 }
 
@@ -251,7 +253,7 @@ h1, h2, h3, h4 {
 .lookcard-img-wrapper {
     overflow: hidden;
     margin-bottom: 20px;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(28, 27, 26, 0.05);
 }
 
 .lookcard-img {
@@ -280,7 +282,7 @@ h1, h2, h3, h4 {
 /* Split Creative Layer */
 .split-atelier {
     display: flex;
-    background-color: rgba(99, 99, 98, 0.02);
+    background-color: rgba(74, 74, 72, 0.03);
 }
 
 .split-atelier-left {
@@ -313,7 +315,7 @@ h1, h2, h3, h4 {
 .certification-card {
     background-color: #ffffff;
     border: 1px solid var(--border-color);
-    box-shadow: 0 10px 40px rgba(99, 99, 98, 0.05);
+    box-shadow: 0 10px 40px rgba(28, 27, 26, 0.06);
     display: flex;
     align-items: center;
     max-width: 1100px;
@@ -382,7 +384,7 @@ h1, h2, h3, h4 {
     display: none;
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(28, 27, 26, 0.7);
     z-index: 2000;
     justify-content: center;
     align-items: center;
@@ -394,7 +396,7 @@ h1, h2, h3, h4 {
     max-width: 700px;
     width: 100%;
     position: relative;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
 }
 
 .cert-modal-img {
@@ -414,7 +416,8 @@ h1, h2, h3, h4 {
 
 /* Testimonials */
 .testimonial-carousel {
-    background-color: var(--bg-color);
+    background-color: var(--accent-dark);
+    color: #f4f1ec;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
@@ -430,12 +433,14 @@ h1, h2, h3, h4 {
     font-size: 1.6rem;
     line-height: 1.5;
     margin-bottom: 20px;
+    color: #f4f1ec;
 }
 
 .testimonial-author {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 3px;
+    color: #cfcdc8;
 }
 
 /* Lookbook Gallery Grid */
@@ -545,14 +550,14 @@ h1, h2, h3, h4 {
     right: 40px;
     width: 50px;
     height: 50px;
-    background-color: var(--primary-color);
+    background-color: var(--accent-dark);
     color: var(--bg-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     z-index: 999;
     text-decoration: none;
     transition: transform 0.3s ease;
@@ -564,6 +569,8 @@ h1, h2, h3, h4 {
 
 /* Editorial Footer */
 .luxury-footer {
+    background-color: var(--accent-dark);
+    color: #d8d6d2;
     border-top: 1px solid var(--border-color);
     padding: 80px 8% 40px 8%;
 }
@@ -578,11 +585,12 @@ h1, h2, h3, h4 {
 .footer-col h4 {
     font-size: 0.85rem;
     margin-bottom: 25px;
+    color: #f4f1ec;
 }
 
 .footer-col p, .footer-col a {
     font-size: 0.8rem;
-    color: var(--primary-color);
+    color: #d8d6d2;
     text-decoration: none;
     opacity: 0.8;
     display: block;
@@ -601,11 +609,11 @@ h1, h2, h3, h4 {
 }
 
 .social-tray a {
-    color: var(--primary-color);
+    color: #d8d6d2;
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid rgba(244, 241, 236, 0.15);
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
