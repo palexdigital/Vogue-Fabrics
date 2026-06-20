@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vogue Fabric | Luxury Fashion & Premium Textiles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0a0a09;
+            color: #ffffff;
+        }
+        .logo-font {
+            font-family: 'Allura', cursive;
+        }
+        .luxury-transition {
+            transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        /* Custom styles to force exact input and placeholder look on dark canvas */
+        input, textarea {
+            color: #ffffff !important;
+        }
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.4) !important;
+        }
+
+        /* --- CUSTOM WHATSAPP SLIDING BUTTON STYLES --- */
+        .Btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition-duration: 0.3s;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+            background-color: #00d757;
+        }
+
+        .sign {
+            width: 100%;
+            transition-duration: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sign svg {
+            width: 25px;
+        }
+
+        .sign svg path {
+            fill: white;
+        }
+
+        .text {
+            position: absolute;
+            right: 0%;
+            width: 0%;
+            opacity: 0;
+            color: white;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition-duration: 0.3s;
+        }
+
+        .Btn:hover {
+            width: 150px;
+            border-radius: 40px;
+            transition-duration: 0.3s;
+        }
+
+        .Btn:hover .sign {
+            width: 30%;
+            transition-duration: 0.3s;
+            padding-left: 10px;
+        }
+
+        .Btn:hover .text {
+            opacity: 1;
+            width: 70%;
+            transition-duration: 0.3s;
+            padding-right: 10px;
+        }
+
+        .Btn:active {
+            transform: translate(2px, 2px);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBase: '#0a0a09',
+                        luxuryGray: '#383735'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased selection:bg-[#383735] selection:text-white">
+
+    <nav class="fixed top-0 left-0 w-full bg-[#0a0a09]/95 backdrop-blur-md border-b border-[#383735]/40 z-50 px-6 lg:px-16 py-4 flex justify-between items-center">
+        <a href="#" onclick="navigateTo('home')" class="logo-font text-3xl lg:text-4xl text-white font-medium tracking-wide">Vogue Fabric</a>
+        
+        <div class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium text-white/80">
+            <a href="#" onclick="navigateTo('home')" class="hover:text-white border-b border-transparent hover:border-white/40 pb-1 luxury-transition">Home</a>
+            <a href="#" onclick="navigateTo('exclusives')" class="hover:text-white border-b border-transparent hover:border-white/40 pb-1 luxury-transition">The Exclusives</a>
+            <a href="#" onclick="navigateTo('fabrics')" class="hover:text-white border-b border-transparent hover:border-white/40 pb-1 luxury-transition">Vogue Fabric</a>
+            <a href="#" onclick="scrollToSection('certification-section')" class="hover:text-white border-b border-transparent hover:border-white/40 pb-1 luxury-transition">Certification</a>
+            <a href="#" onclick="scrollToSection('contact-section')" class="hover:text-white border-b border-transparent hover:border-white/40 pb-1 luxury-transition">Contact</a>
+        </div>
+
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-white p-1">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0a0a09] z-40 transform translate-x-full luxury-transition flex flex-col justify-center items-center space-y-8 text-sm uppercase tracking-widest font-medium">
+        <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <a href="#" onclick="navigateTo('home'); toggleMobileMenu()" class="text-white hover:opacity-75">Home</a>
+        <a href="#" onclick="navigateTo('exclusives'); toggleMobileMenu()" class="text-white hover:opacity-75">The Exclusives</a>
+        <a href="#" onclick="navigateTo('fabrics'); toggleMobileMenu()" class="text-white hover:opacity-75">Vogue Fabric</a>
+        <a href="#" onclick="scrollToSection('certification-section'); toggleMobileMenu()" class="text-white hover:opacity-75">Certification</a>
+        <a href="#" onclick="scrollToSection('contact-section'); toggleMobileMenu()" class="text-white hover:opacity-75">Contact</a>
+    </div>
+
+    <main id="page-home" class="page-view pt-16">
+        
+        <section class="relative w-full h-[90vh] lg:h-screen bg-[#0a0a09] flex items-center overflow-hidden">
+            <div class="absolute inset-0 w-full h-full z-0">
+                <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-50">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-fashion-woman-with-a-luxury-red-dress-41710-large.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="relative z-10 max-w-4xl px-6 lg:px-16 text-white">
+                <h1 class="text-4xl md:text-6xl font-light tracking-tight mb-4 max-w-2xl leading-tight">Crafted for Women Who Understand Elegance.</h1>
+                <p class="text-sm md:text-base text-white/70 font-light max-w-md tracking-wide mb-8">Exclusive dresses and premium fabrics curated without compromise.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="navigateTo('exclusives')" class="bg-white text-[#0a0a09] text-xs uppercase tracking-widest px-8 py-4 font-medium hover:bg-[#383735] hover:text-white luxury-transition">Explore The Exclusives</button>
+                    <button onclick="navigateTo('fabrics')" class="border border-white text-white text-xs uppercase tracking-widest px-8 py-4 font-medium hover:bg-white hover:text-[#0a0a09] luxury-transition">Explore Vogue Fabric</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-4 lg:px-12 max-w-[1700px] mx-auto">
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="group cursor-pointer flex flex-col" onclick="navigateTo('exclusives')">
+                    <div class="overflow-hidden bg-[#383735] aspect-[2/3] mb-6 border border-[#383735]/30">
+                        <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1200&q=90" alt="The Exclusives Portfolio" class="w-full h-full object-cover opacity-90 group-hover:scale-105 luxury-transition">
+                    </div>
+                    <div class="flex justify-between items-baseline px-2">
+                        <div>
+                            <h3 class="text-xl font-light tracking-wide text-white">The Exclusives</h3>
+                            <p class="text-xs text-white/60 tracking-wide mt-1">Luxury dresses and exclusive women's fashion.</p>
+                        </div>
+                        <span class="text-xs uppercase tracking-widest font-medium text-white border-b border-white pb-1">Explore Portfolio</span>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer flex flex-col" onclick="navigateTo('fabrics')">
+                    <div class="overflow-hidden bg-[#383735] aspect-[2/3] mb-6 border border-[#383735]/30">
+                        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=90" alt="Vogue Fabric Selection" class="w-full h-full object-cover opacity-90 group-hover:scale-105 luxury-transition">
+                    </div>
+                    <div class="flex justify-between items-baseline px-2">
+                        <div>
+                            <h3 class="text-xl font-light tracking-wide text-white">Vogue Fabric</h3>
+                            <p class="text-xs text-white/60 tracking-wide mt-1">Premium fabrics and luxury textile selections.</p>
+                        </div>
+                        <span class="text-xs uppercase tracking-widest font-medium text-white border-b border-white pb-1">Explore Textiles</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#383735] text-white py-24 px-6 lg:px-16">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="aspect-[2/3] overflow-hidden bg-[#0a0a09]">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=90" alt="Brand Story Heritage" class="w-full h-full object-cover opacity-85">
+                </div>
+                <div class="space-y-6 md:pl-8">
+                    <p class="text-xs uppercase tracking-widest text-white/60">Our Heritage</p>
+                    <h2 class="text-3xl font-light tracking-tight leading-snug">Curating Elegance, Thread By Thread.</h2>
+                    <p class="text-sm text-white/80 font-light leading-relaxed tracking-wide">
+                        Vogue Fabric caters exclusively to the woman of timeless discernment. We source premium lace, luxurious silks, and highly curated haute couture textiles globally, creating custom elegant compositions that reject the fleeting trends of the day. Every selection represents an unwavering commitment to pure design metrics, luxurious texture, and peerless material refinement.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6 lg:px-16 max-w-[1700px] mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-xs uppercase tracking-widest text-white/60 mb-2">Curated Highlights</p>
+                <h2 class="text-2xl font-light tracking-wider uppercase text-white">The Masterpiece Edit</h2>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-showcase-grid">
+                </div>
+        </section>
+
+        <section id="certification-section" class="bg-[#0a0a09] border-t border-b border-[#383735]/60 py-24 px-6 lg:px-16">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 space-y-6">
+                    <p class="text-xs uppercase tracking-widest text-white/60">Corporate Affairs Commission / Official Verification</p>
+                    <h2 class="text-2xl font-light tracking-tight text-white">Registered Professional Certification & Accreditation</h2>
+                    <p class="text-sm text-white/80 font-light leading-relaxed tracking-wide">
+                        Our commitment to excellence is supported by recognized industry certifications and continuous professional development. This certification demonstrates adherence to professional standards, best practices, and a dedication to delivering quality services.
+                    </p>
+                    <div class="pt-4">
+                        <a href="certficate.jpg" target="_blank" class="inline-block bg-[#383735] text-white text-xs uppercase tracking-widest px-8 py-4 font-medium hover:bg-white hover:text-[#0a0a09] luxury-transition border border-[#383735]">View Certificate</a>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center bg-[#383735]/20 p-6 shadow-sm border border-[#383735]/40">
+                    <img src="certficate.jpg" alt="Vogue Fabrics & Co Ltd Corporate Affairs Commission Certificate" class="max-h-[550px] object-contain">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="py-24 px-6 lg:px-16 max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-light tracking-wider uppercase text-white">Bespoke Consultation & Inquiries</h2>
+                <p class="text-xs text-white/60 mt-2 tracking-widest uppercase">Direct Concierge Communication Link</p>
+            </div>
+            
+            <form onsubmit="handleInquirySubmit(event)" id="whatsapp-inquiry-form" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-widest mb-2 font-medium text-white/80">Full Name</label>
+                        <input type="text" id="inq-name" required class="w-full bg-transparent border-b border-[#383735] py-2 text-sm focus:outline-none focus:border-white text-white font-light luxury-transition">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-widest mb-2 font-medium text-white/80">Email Address</label>
+                        <input type="email" id="inq-email" required class="w-full bg-transparent border-b border-[#383735] py-2 text-sm focus:outline-none focus:border-white text-white font-light luxury-transition">
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-widest mb-2 font-medium text-white/80">Phone Number</label>
+                        <input type="tel" id="inq-phone" required class="w-full bg-transparent border-b border-[#383735] py-2 text-sm focus:outline-none focus:border-white text-white font-light luxury-transition">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-widest mb-2 font-medium text-white/80">City</label>
+                        <input type="text" id="inq-city" required class="w-full bg-transparent border-b border-[#383735] py-2 text-sm focus:outline-none focus:border-white text-white font-light luxury-transition">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] uppercase tracking-widest mb-2 font-medium text-white/80">Country</label>
+                        <input type="text" id="inq-country" required class="w-full bg-transparent border-b border-[#383735] py-2 text-sm focus:outline-none focus:border-white text-white font-light luxury-transition">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] uppercase tracking-widest mb-2 font-medium text-white/80">How Can We Help You?</label>
+                    <textarea id="inq-message" rows="4" required class="w-full bg-transparent border-b border-[#383735] py-2 text-sm focus:outline-none focus:border-white text-white font-light luxury-transition resize-none"></textarea>
+                </div>
+                <div class="text-center pt-4">
+                    <button type="submit" class="w-full md:w-auto bg-[#383735] text-white text-xs uppercase tracking-widest px-12 py-4 font-medium hover:bg-white hover:text-[#0a0a09] luxury-transition border border-[#383735]">Submit Inquiry via WhatsApp</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <main id="page-exclusives" class="page-view hidden pt-28 pb-24 px-6 lg:px-16 max-w-[1700px] mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 pb-6 border-b border-[#383735]/40">
+            <div>
+                <h1 class="text-3xl font-light tracking-wide text-white">The Exclusives Portfolio</h1>
+                <p class="text-xs text-white/60 tracking-widest uppercase mt-2">Luxury women's gowns & premium evening wear</p>
+            </div>
+            <div class="flex flex-wrap gap-4 mt-6 md:mt-0 text-xs uppercase tracking-widest font-medium">
+                <button onclick="filterProducts('exclusives', 'all')" class="border-b border-white pb-1 text-white">All Collections</button>
+                <button onclick="filterProducts('exclusives', 'Evening Dresses')" class="text-white/60 hover:text-white luxury-transition">Evening</button>
+                <button onclick="filterProducts('exclusives', 'Luxury Gowns')" class="text-white/60 hover:text-white luxury-transition">Gowns</button>
+                <button onclick="filterProducts('exclusives', 'Cocktail Dresses')" class="text-white/60 hover:text-white luxury-transition">Cocktail</button>
+                <button onclick="filterProducts('exclusives', 'Bridal Styles')" class="text-white/60 hover:text-white luxury-transition">Bridal</button>
+            </div>
+        </div>
+        
+        <div id="exclusives-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            </div>
+    </main>
+
+    <main id="page-fabrics" class="page-view hidden pt-28 pb-24 px-6 lg:px-16 max-w-[1700px] mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 pb-6 border-b border-[#383735]/40">
+            <div>
+                <h1 class="text-3xl font-light tracking-wide text-white">Vogue Fabric Collection</h1>
+                <p class="text-xs text-white/60 tracking-widest uppercase mt-2">Premium textiles & close-up weave variants</p>
+            </div>
+            <div class="flex flex-wrap gap-4 mt-6 md:mt-0 text-xs uppercase tracking-widest font-medium">
+                <button onclick="filterProducts('fabrics', 'all')" class="border-b border-white pb-1 text-white">All Fabrics</button>
+                <button onclick="filterProducts('fabrics', 'Lace')" class="text-white/60 hover:text-white luxury-transition">Lace</button>
+                <button onclick="filterProducts('fabrics', 'Silk')" class="text-white/60 hover:text-white luxury-transition">Silk</button>
+                <button onclick="filterProducts('fabrics', 'Organza')" class="text-white/60 hover:text-white luxury-transition">Organza</button>
+                <button onclick="filterProducts('fabrics', 'Embroidered Fabrics')" class="text-white/60 hover:text-white luxury-transition">Embroidered</button>
+            </div>
+        </div>
+        
+        <div id="fabrics-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            </div>
+    </main>
+
+    <footer class="bg-[#0a0a09] text-white pt-16 pb-8 px-6 lg:px-16 border-t border-[#383735]/40">
+        <div class="max-w-[1700px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[#383735]/20">
+            <div class="space-y-4">
+                <h4 class="logo-font text-3xl font-medium tracking-wide text-white">Vogue Fabric</h4>
+                <p class="text-xs text-white/60 font-light max-w-xs leading-relaxed">High-end editorial fashion house and providers of immaculate curated luxury fabrics.</p>
+            </div>
+            <div>
+                <h5 class="text-xs uppercase tracking-widest font-medium mb-4 text-white/80">Explore</h5>
+                <div class="flex flex-col space-y-2 text-xs text-white/60">
+                    <a href="#" onclick="navigateTo('home')" class="hover:text-white">Home Navigation</a>
+                    <a href="#" onclick="navigateTo('exclusives')" class="hover:text-white">The Exclusives Portfolio</a>
+                    <a href="#" onclick="navigateTo('fabrics')" class="hover:text-white">Vogue Premium Fabrics</a>
+                </div>
+            </div>
+            <div>
+                <h5 class="text-xs uppercase tracking-widest font-medium mb-4 text-white/80">Legal & Compliance</h5>
+                <div class="flex flex-col space-y-2 text-xs text-white/60">
+                    <a href="#" onclick="scrollToSection('certification-section')" class="hover:text-white">CAC Incorporation Verification</a>
+                </div>
+            </div>
+            <div>
+                <h5 class="text-xs uppercase tracking-widest font-medium mb-4 text-white/80">Connect</h5>
+                <div class="flex space-x-4 mb-4 text-xs font-medium uppercase tracking-widest">
+                    <a href="https://instagram.com" target="_blank" class="text-white hover:text-white/70 luxury-transition">Instagram</a>
+                    <a href="https://tiktok.com" target="_blank" class="text-white hover:text-white/70 luxury-transition">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1700px] mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] tracking-widest text-white/40 uppercase">
+            <p>&copy; 2026 Vogue Fabrics & Co Ltd. All Rights Reserved.</p>
+            <p>Developed By <a href="https://palexdigital.pages.dev/" target="_blank" class="underline hover:text-white luxury-transition">PaleX Digital</a></p>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-8 right-8 z-50">
+        <a href="https://api.whatsapp.com/send/?phone=2348035539993&text&type=phone_number&app_absent=0" target="_blank" class="block decoration-transparent text-white" aria-label="Bespoke Concierge WhatsApp Link">
+            <button class="Btn">
+                <div class="sign">
+                    <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                    </svg>
+                </div>
+                <div class="text">Whatsapp</div>
+            </button>
+        </a>
+    </div>
+
+    <script>
+        // EXPANDED PORTFOLIO GRAPHICS BOUNDS
+        const products = [
+            { id: 'exc-01', name: 'Ethereal Velvet Corset Gown', category: 'Luxury Gowns', type: 'exclusives', img: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=90', desc: 'Handcrafted fluid luxury structural velvet corset gown constructed with micro-boning detail.' },
+            { id: 'exc-02', name: 'Liquid Satin Asymmetrical Midi', category: 'Cocktail Dresses', type: 'exclusives', img: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=90', desc: 'Premium ultraweight heavy satin structural lines with minimal draped neckline.' },
+            { id: 'exc-03', name: 'Ornate Crystal Evening Sheath', category: 'Evening Dresses', type: 'exclusives', img: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=90', desc: 'Intricate glass crystals embroidered across custom floor length high-neck mesh silhouette.' },
+            { id: 'exc-04', name: 'Minimal Sculpted Bridal Column', category: 'Bridal Styles', type: 'exclusives', img: 'https://images.unsplash.com/photo-1549417229-aa67d3263c09?auto=format&fit=crop&w=800&q=90', desc: 'Clean structural silk crepe de chine floor architectural statement bridal dress.' },
+            { id: 'exc-05', name: 'Draped Silk Tulle Ball Gown', category: 'Luxury Gowns', type: 'exclusives', img: 'https://images.unsplash.com/photo-1518049360964-6a417c16c04d?auto=format&fit=crop&w=800&q=90', desc: 'Fine Italian silk tulle cascading elegantly into a voluminous formal high-fashion silhouette.' },
+            { id: 'exc-06', name: 'Chiffon Pleated Silhouette', category: 'Evening Dresses', type: 'exclusives', img: 'https://images.unsplash.com/photo-1539008835657-9e8e81839223?auto=format&fit=crop&w=800&q=90', desc: 'Meticulously pleated plissé chiffon featuring an ethereal, weightless flowing stride.' },
+            
+            { id: 'fab-01', name: 'Baroque Corded Chantilly Lace', category: 'Lace', type: 'fabrics', img: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=90', desc: 'Intricate corded French metallic yarn lace with premium border scallops.' },
+            { id: 'fab-02', name: 'Heavyweight Mulberry Silk Crepe', category: 'Silk', type: 'fabrics', img: 'https://images.unsplash.com/photo-1584290867415-527a8475726d?auto=format&fit=crop&w=800&q=90', desc: 'Pure 40mm organic Mulberry raw slub woven textile for flawless structure.' },
+            { id: 'fab-03', name: 'Gilded Filigree Organza Weave', category: 'Organza', type: 'fabrics', img: 'https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=800&q=90', desc: 'Stiff translucent raw silk matrix integrated with hand-poured metallic element styling.' },
+            { id: 'fab-04', name: '3D Intarsia Floral Embroidered Tulle', category: 'Embroidered Fabrics', type: 'fabrics', img: 'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=800&q=90', desc: 'Raised laser-cut layered satin components meticulously stitched down to illusion mesh base.' },
+            { id: 'fab-05', name: 'Guipure Geometric Cutwork Lace', category: 'Lace', type: 'fabrics', img: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=90', desc: 'Premium thick structural cotton-blend lace featuring architectural pattern cutouts.' },
+            { id: 'fab-06', name: 'Raw Textured Dupioni Silk', category: 'Silk', type: 'fabrics', img: 'https://images.unsplash.com/photo-1606722590583-6951b5ea92ce?auto=format&fit=crop&w=800&q=90', desc: 'Lustrous, tightly woven double-thread slub silk displaying rich heritage texture and pristine drape.' }
+        ];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderFeaturedShowcase();
+            renderProductGrid('exclusives', 'all');
+            renderProductGrid('fabrics', 'all');
+        });
+
+        // SITE NAVIGATION LOGIC
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page-view').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`page-${pageId}`).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToSection(id) {
+            navigateTo('home');
+            setTimeout(() => {
+                const target = document.getElementById(id);
+                if(target) target.scrollIntoView({ behavior: 'smooth' });
+            }, 150);
+        }
+
+        // CONTROL NAV OVERLAY
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('translate-x-full');
+        }
+
+        // PURE PICTURE PRESENTATION WITH EDITORIAL CAPS
+        function renderFeaturedShowcase() {
+            const container = document.getElementById('featured-showcase-grid');
+            container.innerHTML = products.slice(0, 6).map(prod => `
+                <div class="group flex flex-col border border-[#383735]/30 p-3 bg-[#383735]/10">
+                    <div class="overflow-hidden bg-[#383735] aspect-[2/3] mb-4 relative">
+                        <img src="${prod.img}" alt="${prod.name}" class="w-full h-full object-cover group-hover:scale-105 luxury-transition">
+                    </div>
+                    <span class="text-[9px] uppercase tracking-widest text-white/50 mb-1">${prod.category}</span>
+                    <h3 class="text-xs uppercase tracking-wider font-medium text-white">${prod.name}</h3>
+                </div>
+            `).join('');
+        }
+
+        function renderProductGrid(type, filter) {
+            const container = document.getElementById(`${type}-grid`);
+            const targetProducts = products.filter(p => p.type === type && (filter === 'all' || p.category === filter));
+            
+            container.innerHTML = targetProducts.map(prod => `
+                <div class="flex flex-col bg-[#383735]/10 border border-[#383735]/40 p-4 relative group">
+                    <div class="overflow-hidden aspect-[2/3] bg-[#0a0a09] mb-4">
+                        <img src="${prod.img}" alt="${prod.name}" class="w-full h-full object-cover group-hover:scale-105 luxury-transition">
+                    </div>
+                    <span class="text-[9px] uppercase tracking-widest text-white/50 font-medium">${prod.category}</span>
+                    <h3 class="text-sm font-light tracking-wide text-white mt-1 mb-2">${prod.name}</h3>
+                    <p class="text-[11px] font-light text-white/70 tracking-wide leading-relaxed">${prod.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        function filterProducts(type, category) {
+            renderProductGrid(type, category);
+            const buttons = event.currentTarget.parentNode.children;
+            for(let btn of buttons) { btn.className = "text-white/60 hover:text-white luxury-transition"; }
+            event.currentTarget.className = "border-b border-white pb-1 text-white";
+        }
+
+        // CONCIERGE INTEGRATION
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('inq-name').value;
+            const email = document.getElementById('inq-email').value;
+            const phone = document.getElementById('inq-phone').value;
+            const city = document.getElementById('inq-city').value;
+            const country = document.getElementById('inq-country').value;
+            const message = document.getElementById('inq-message').value;
+
+            const textPayload = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCity: ${city}\nCountry: ${country}\nInquiry:\n${message}`;
+            const targetUrl = `https://api.whatsapp.com/send/?phone=2348035539993&text=${encodeURIComponent(textPayload)}&type=phone_number&app_absent=0`;
+            
+            window.open(targetUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
