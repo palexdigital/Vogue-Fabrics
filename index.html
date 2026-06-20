@@ -161,7 +161,9 @@
             <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
                 <div class="group cursor-pointer flex flex-col" onclick="navigateTo('exclusives')">
                     <div class="overflow-hidden bg-[#383735] aspect-[2/3] mb-6 border border-[#383735]/30">
-                        <img src="https://img.sanishtech.com/u/1b37190711f8303fa101f2d8f53a4be6.jpg" alt="The Exclusives Portfolio" class="w-full h-full object-cover opacity-90 group-hover:scale-105 luxury-transition">
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-90 group-hover:scale-105 luxury-transition">
+                            <source src="information.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="flex justify-between items-baseline px-2">
                         <div>
@@ -174,7 +176,9 @@
 
                 <div class="group cursor-pointer flex flex-col" onclick="navigateTo('fabrics')">
                     <div class="overflow-hidden bg-[#383735] aspect-[2/3] mb-6 border border-[#383735]/30">
-                        <img src="https://img.sanishtech.com/u/e9a61df51f14fca976d678eeba5894aa.jpg" alt="Vogue Fabric Selection" class="w-full h-full object-cover opacity-90 group-hover:scale-105 luxury-transition">
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-90 group-hover:scale-105 luxury-transition">
+                            <source src="information1.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="flex justify-between items-baseline px-2">
                         <div>
@@ -190,9 +194,10 @@
         <section class="bg-[#383735] text-white py-24 px-6 lg:px-16">
             <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <div class="aspect-[2/3] overflow-hidden bg-[#0a0a09]">
-                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=90" alt="Brand Story Heritage" class="w-full h-full object-cover opacity-85">
+                    <video width="100%" autoplay muted loop playsinline>
+                     <source src="https://information.mp4" type="video/mp4">
+                    </video>
                 </div>
-
                 <div class="space-y-6 md:pl-8">
                     <p class="text-xs uppercase tracking-widest text-white/60">Our Heritage</p>
                     <h2 class="text-3xl font-light tracking-tight leading-snug">Curating Elegance, Thread By Thread.</h2>
@@ -210,7 +215,7 @@
             </div>
             
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-showcase-grid">
-                </div>
+            </div>
         </section>
 
         <section id="certification-section" class="bg-[#0a0a09] border-t border-b border-[#383735]/60 py-24 px-6 lg:px-16">
@@ -289,7 +294,7 @@
         </div>
         
         <div id="exclusives-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            </div>
+        </div>
     </main>
 
     <main id="page-fabrics" class="page-view hidden pt-28 pb-24 px-6 lg:px-16 max-w-[1700px] mx-auto">
@@ -308,7 +313,7 @@
         </div>
         
         <div id="fabrics-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            </div>
+        </div>
     </main>
 
     <footer class="bg-[#0a0a09] text-white pt-16 pb-8 px-6 lg:px-16 border-t border-[#383735]/40">
@@ -450,8 +455,7 @@
             const message = document.getElementById('inq-message').value;
 
             const textPayload = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCity: ${city}\nCountry: ${country}\nInquiry:\n${message}`;
-            const targetUrl = `https://api.whatsapp.com/send/?phone=2348035539993&text=${encodeURIComponent(textPayload)}&type=phone_number&app_absent=0`;
-            
+            const targetUrl = `https://api.whatsapp.com/send/?phone=2348035539993&text=${encodeURIComponent(textPayload)}`;
             window.open(targetUrl, '_blank');
         }
     </script>
